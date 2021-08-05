@@ -1,0 +1,41 @@
+$mainFontColor: #ddcaf1;
+$backgroundColor: #8954c3;
+
+.header {
+  background-color: $backgroundColor;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  padding: 0 10%;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  ul {
+    list-style: none;
+    display: -webkit-box;
+
+    li:first-of-type {
+      margin-left: 0;
+    }
+    li {
+      margin: 0 3%;
+      a {
+        color: $mainFontColor;
+        text-decoration: none;
+        transition: 300ms;
+      }
+      a:hover {
+        color: #ffffff;
+      }
+    }
+    li:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
