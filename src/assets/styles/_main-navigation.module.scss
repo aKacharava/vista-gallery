@@ -30,12 +30,20 @@ $backgroundColor: #8954c3;
         text-decoration: none;
         transition: 300ms;
       }
-      a:hover {
+      a:hover,
+      a:active {
         color: #ffffff;
       }
     }
     li:last-of-type {
       margin-right: 0;
+    }
+    .badge {
+      background-color: #2031cc;
+      color: $mainFontColor;
+      border-radius: 12px;
+      padding: 0 1rem;
+      margin-left: 0.5rem;
     }
   }
 }
