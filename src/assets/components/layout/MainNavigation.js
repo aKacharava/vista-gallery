@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import styling from './_main-navigation.module.scss';
+import styling from '../../styles/_main-navigation.module.scss';
 
 export default function MainNavigation() {
   return (

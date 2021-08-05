@@ -1,0 +1,47 @@
+$mainFontColor: #ffffff;
+$secondFontColor: #000000;
+$hoverColor: #8954c3;
+
+.form {
+  padding: 1rem;
+
+  .control {
+    margin-bottom: 0.5rem;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    input{
+      display: block;
+      font: inherit;
+      border-radius: 4px;
+      padding: 0.25rem;
+      width: 100%;
+    }
+  }
+
+  .actions {
+    margin-top: 1rem;
+    text-align: right;
+
+    button {
+      font: inherit;
+      cursor: pointer;
+      background-color: $secondFontColor;
+      color: $mainFontColor;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid $secondFontColor;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: all 300ms;
+    }
+    button:hover,
+    button:active {
+      background-color: $hoverColor;
+      border-color: $hoverColor;
+    }
+  }
+}

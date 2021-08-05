@@ -1,5 +1,5 @@
 import React from "react";
-import styling from "./_photo-item.module.scss";
+import styling from "../../styles/_photo-item.module.scss";
 import Card from "../ui/Card";
 
 export default function PhotoItem(props) {

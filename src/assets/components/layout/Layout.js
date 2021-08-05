@@ -1,6 +1,6 @@
 import React from 'react';
 import MainNavigation from "./MainNavigation";
-import styling from './_layout.module.scss';
+import styling from '../../styles/_layout.module.scss';
 
 export default function Layout(props) {
     return (
