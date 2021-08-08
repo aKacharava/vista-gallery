@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
 import styling from "../../styles/_main-navigation.module.scss";
-import { useContext } from "react";
 import FavoritesContext from "../../../store/favorites-context";
+import { Link } from "react-router-dom";
+import { MainNavigationItem } from "./MainNavigationItem";
 
 export default function MainNavigation() {
   const favoritesCtx = useContext(FavoritesContext);
@@ -12,17 +12,31 @@ export default function MainNavigation() {
       <div className={styling.logo}>Vista Gallery</div>
       <nav>
         <ul>
-          <li>
-            <Link to="/">All Photos</Link>
-          </li>
-          <li>
-            <Link to="/new-photos">Add New Photos</Link>
-          </li>
-          <li>
-            <Link to="/favorites">
-              My Favorites <span className={styling.badge}>{favoritesCtx.totalFavorites}</span>
-            </Link>
-          </li>
+          {MainNavigationItem.map((val, key) => {
+            let favoriteCounter;
+
+            if (val.id === 3) {
+              favoriteCounter = (
+                <span className={styling.badge}>
+                  {favoritesCtx.totalFavorites}
+                </span>
+              );
+            }
+
+            return (
+              <li key={key}>
+                <Link
+                  to={val.link}
+                  id={window.location.pathname === val.link ? "active" : ""}
+                  onClick={() =>{
+                    window.location.pathname = val.link;
+                  }}
+                >
+                  {val.title} {favoriteCounter}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>

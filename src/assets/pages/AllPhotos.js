@@ -32,8 +32,6 @@ export default function AllPhotos() {
       });
   }, []);
 
-  console.log(loadedPhotos);
-
   if (isLoading) {
     return (
       <section>
