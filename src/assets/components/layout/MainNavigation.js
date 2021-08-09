@@ -27,10 +27,6 @@ export default function MainNavigation() {
               <li key={key}>
                 <Link
                   to={val.link}
-                  id={window.location.pathname === val.link ? "active" : ""}
-                  onClick={() =>{
-                    window.location.pathname = val.link;
-                  }}
                 >
                   {val.title} {favoriteCounter}
                 </Link>
